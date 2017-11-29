@@ -33,15 +33,18 @@ h1 a:hover{
 }
 
 /******* Layout Styles *******/
+body {
+   margin: 0;
+}
+
 #pageOne {
     text-align: center;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    padding: 10px;
 }
-
 
 
 /******* Nav Styles *******/

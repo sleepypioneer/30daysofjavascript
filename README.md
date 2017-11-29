@@ -1,10 +1,12 @@
-# Grow It - produce growing website for everyone
+# 30 Days of JavaScript
 
-This project is an app to encourage people to grow produce themselves in the space they have, from herbs to pumpkins.
+Before year end I plan to complete the challenge alongside the current JavaScript and Web development course I am taking here in Berlin. 
 
-Containing a plant wiki and suggestions on how to get started the app taylors suggestions to your location, compass direction & light situation,
-space available, and desired outcome (ie salad garden, herb garden, edible flowers, vegetables).
-Additional sections to be added would include tips for composting, soils, insects as well as your own grow journal and a community section.
+You can read about my progress my blog page and below see the projects as I complete them. The idea of JavaScript 30 is to code to completion 30 projects using vanilla JavaScript code, from a Drum Kit to a 'Wack a Mole' game. 
+
+If you want to also take the challenge you can join here: https://javascript30.com/ 
+
+
 
 ### Server
 
