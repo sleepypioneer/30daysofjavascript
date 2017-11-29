@@ -1,0 +1,206 @@
+/*************** Mobile First - no grid Support - Portrait ***************/
+
+/******* Text Styles *******/
+h1,h5{
+    font-family: 'Abril Fatface', cursive;
+}
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+}
+
+h1 a {
+    text-decoration: none;
+    color:inherit;
+    opacity: 0.7;
+}
+
+h1 a:hover{
+        opacity: 1;
+}
+
+.header h1, p {
+    margin: 0;
+}
+
+/******* Image Styles *******/
+.avatar {
+    height: 50vw;
+    width: 50vw;
+    border-radius: 6px;
+    margin: 5px;
+    clip-path: circle(22vw at 25vw 13vh);
+}
+
+/******* Layout Styles *******/
+#pageOne {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+
+
+/******* Nav Styles *******/
+
+nav {
+    display: flex;
+}
+
+ul {
+    margin: auto;
+    padding: 0;
+}
+
+
+/* Social Nav - text not displayed on mobile */
+.socialNav {
+    display: none;
+}
+
+.logo {
+    width: 5vw;
+    padding: 2px;
+    margin: auto;
+}
+
+#socialNav nav li {
+    list-style: none;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* Page Nav - text not displayed on mobile */
+.pageNav {
+    display: none;
+}
+
+#pageNav nav {
+    display: flex;
+}
+
+#pageNav nav li {
+    display: block;
+    overflow: hidden;
+    width: 90vw;
+    height: 30vh;
+    margin: 5vw auto;
+    background: 50% 50% no-repeat;
+
+}
+
+#pageNav nav li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.projectPlaceholder {
+   display: none;
+}
+/*************** Mobile First - no grid Support - Landscape ***************/
+
+
+
+
+/*************** With grid Support ***************/
+
+@supports (display: grid) {
+    
+
+
+
+}
+
+
+
+
+/*************** Media Query Small Screen ***************/
+
+
+/******* Text Styles *******/
+
+
+
+/******* Image Styles *******/
+
+
+
+/******* Layout Styles *******/
+
+
+
+/******* Nav Styles *******/
+
+
+
+/*************** With grid Support ***************/
+
+
+
+
+
+
+/*************** Media Query Medium Screen ***************/
+
+
+/******* Text Styles *******/
+
+
+
+/******* Image Styles *******/
+
+
+
+/******* Layout Styles *******/
+
+
+
+/******* Nav Styles *******/
+/*
+#pageNav nav li {
+    justify-content: space-around;
+    items-align: center;
+    list-style: none;
+    margin: 3vw;
+    width: 80vw;
+    height: 80vw;
+    overflow: hidden;
+}
+
+.projectPlaceholder {
+    height: 100%;
+    items-align: center;
+}
+*/
+
+
+/*************** With grid Support ***************/
+
+
+
+
+
+/*************** Media Query Large Screen ***************/
+
+
+/******* Text Styles *******/
+
+
+
+/******* Image Styles *******/
+
+
+
+/******* Layout Styles *******/
+
+
+
+/******* Nav Styles *******/
+
+
+/*************** With grid Support ***************/
