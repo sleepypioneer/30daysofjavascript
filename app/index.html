@@ -4,16 +4,22 @@
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale =1.0">
 		<title>30 Days of JavaScript Challenge - @sleepypioneer </title>
+		
+		<!-- Add Style Sheets -->
 	    <link rel="stylesheet" type="text/css" href="styleSheets/mainStyleSheet.css">
-		<script src="scripts/indexScripts.js"></script>
+		
+		<!-- Add Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway" rel="stylesheet">
+		
+		<!-- Add icon library -->
+`		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		<noscript> This site needs JavaScript to run <3 </noscript>
 		
 		<div id="pageOne">
+			<img src="assets/indexImages/JS3-social-share.png" alt="avatar" class="avatar"/>
 			<div class="header">
-				<img src="assets/logosAvatars/avatar.png" alt="avatar" class="avatar"/>
 				<h1> I am taking the <a href="#"> @wesbros </a> 30 day of JavaScript Challenge </h1>
 			</div>
 			<div class="pageSummary">
@@ -22,10 +28,10 @@
 					You can read about my progress my blog page and below see the projects as I complete them.
 					The idea of JavaScript 30 is to code to completion 30 projects using vanilla JavaScript code, from a Drum Kit to a 'Wack a Mole' game. </br></br>
 					If you want to also take the challenge you can join here: <a href="https://javascript30.com/" target="blank"> https://javascript30.com/ </a>
-					</br></br></br></br>
-					<button id="projects" alt="buttonToLoadProjects">PROJECTS </button>
+					
 				</p>
 			</div>
+			<button id="projects" alt="buttonToLoadProjects">PROJECTS</button>
 			<div id="socialNav">
 				<nav>
 					<ul>
@@ -38,13 +44,20 @@
 		</div>
 
         <div class="container">
+			<div id="returnHome">
+				<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+
+			</div>
             <div id="pageNav">
                 <nav>
                     <ul>
                         <li style="background-image: url(assets/indexImages/blogProjectImagePlacer.JPG);" > <a href="https://sleepypioneer.wordpress.com/" target="blank"> </a></li>
-                        <li style="background-image: url(assets/indexImages/drumKitProjectImagePlacer.jpg);" > <a href="projects/drumKit/drumKit.html" target="" > <img class="projectPlaceholder" src="" alt="drumKitProjectImagePlacer"/> <h5 class="pageNav"> Project One: Drum Kit </h5></a>  </li>
-                        <li style="background-image: url(assets/indexImages/CSSJSClockProjectImagePlacer.jpg);"> <a href="projects/CSSJSClock/CSSClock.html" target="" > <img class="projectPlaceholder" src="assets/indexImages/CSSJSClockProjectImagePlacer.jpg" alt="CSSJSClockProjectImagePlacer"/> <h5 class="pageNav"> Project Two:  CSS & JSS Clock </h5></a> </li>
-                        <li style="background-image: url(assets/indexImages/updateCSSWithJSProjectImagePlacer.jpg);"> <a href="" target="" > <img class="projectPlaceholder" src="assets/indexImages/updateCSSWithJSProjectImagePlacer.jpg" alt="updateCSSWithJSProjectImagePlacer"/> <h5 class="pageNav"> Project Three:  Playing with CSS Variables and JS </h5></a> </li>
+                        <li style="background-image: url(assets/indexImages/drumKitProjectImagePlacer.jpg);" > <a href="projects/drumKit/drumKit.html" target="" >
+							<img class="projectPlaceholder" src="" alt="drumKitProjectImagePlacer"/> <h5 class="pageName"> Project One: Drum Kit </h5></a>  </li>
+                        <li style="background-image: url(assets/indexImages/CSSJSClockProjectImagePlacer.jpg);"> <a href="projects/CSSJSClock/CSSClock.html" target="" >
+							<img class="projectPlaceholder" src="assets/indexImages/CSSJSClockProjectImagePlacer.jpg" alt="CSSJSClockProjectImagePlacer"/> <h5 class="pageName"> Project Two:  CSS & JSS Clock </h5></a> </li>
+                        <li style="background-image: url(assets/indexImages/updateCSSWithJSProjectImagePlacer.jpg);"> <a href="" target="" >
+							<img class="projectPlaceholder" src="assets/indexImages/updateCSSWithJSProjectImagePlacer.jpg" alt="updateCSSWithJSProjectImagePlacer"/> <h5 class="pageName"> Project Three:  Playing with CSS Variables and JS </h5></a> </li>
 				  </ul>
                 </nav>
             </div>
@@ -61,5 +74,7 @@
                 
             </div>
         </div>
+		
+		<script src="scripts/indexScripts.js"></script>
     </body>
 </html>

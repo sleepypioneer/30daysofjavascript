@@ -1,21 +1,24 @@
-/*************** Mobile First - no grid Support - Portrait ***************/
+/*************** Mobile First - no grid Support - Landscape ***************/
 
 /******* Text Styles *******/
 h1,h5{
     font-family: 'Abril Fatface', cursive;
+    font-size: 150%;
+    padding: 0 2em;
 }
 p {
     font-family: 'Raleway', sans-serif;
     font-size: 0.8em;
+    padding: 0 2em;
 }
 
-h1 a {
+a {
     text-decoration: none;
     color:inherit;
     opacity: 0.7;
 }
 
-h1 a:hover{
+a:hover{
         opacity: 1;
 }
 
@@ -25,26 +28,43 @@ h1 a:hover{
 
 /******* Image Styles *******/
 .avatar {
-    height: 50vw;
-    width: 50vw;
+    width: 70vw;
+    height: auto;
     border-radius: 6px;
     margin: 5px;
-    clip-path: circle(22vw at 25vw 13vh);
+    /*clip-path: circle(22vw at 25vw 13vh);*/
 }
 
 /******* Layout Styles *******/
 body {
-   margin: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+	padding: 0;
 }
 
 #pageOne {
     text-align: center;
     display: flex;
+    flex: 1;
+    min-height: 100vh;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    padding: 10px;
+    position:absolute;
+    top: 0;
 }
+
+
+.container {
+    position:absolute;
+    top: 100vh;
+    width: 100vw;
+    height: auto;
+    text-align: center;
+}
+
+
 
 
 /******* Nav Styles *******/
@@ -56,6 +76,23 @@ nav {
 ul {
     margin: auto;
     padding: 0;
+}
+
+#returnHome {
+    visibility: hidden;
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    color: white;
+}
+
+#returnHome i {
+    font-size: 2em;
+}
+
+#returnHome i:hover{
+    opacity: 0.8;
+    font-size: 2em;
 }
 
 
@@ -77,12 +114,19 @@ ul {
 }
 
 /* Page Nav - text not displayed on mobile */
-.pageNav {
+#pageNav {
     display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #pageNav nav {
     display: flex;
+}
+
+.pageName {
+    display: none;
 }
 
 #pageNav nav li {
@@ -123,63 +167,92 @@ ul {
 
 
 /*************** Media Query Small Screen ***************/
+@media screen and (min-width: 651px) {
 
-
-/******* Text Styles *******/
-
-
-
-/******* Image Styles *******/
-
-
-
-/******* Layout Styles *******/
-
-
-
-/******* Nav Styles *******/
-
+    /******* Text Styles *******/
+    h1 {
+        font-size: 3em;
+    }
+    
+    p {
+        font-size: 1.4em;
+    }
+    
+    button {
+        font-size: 1.5em;
+    }
+    
+    
+    /******* Image Styles *******/
+    .avatar {
+        height: 30vw;
+        width: auto;
+        /*clip-path: circle(17vw at 20vw 13vh);*/
+    }
+    
+    
+    /******* Layout Styles *******/
+    
+    
+    
+    /******* Nav Styles *******/
+    #returnHome i {
+        font-size: 4em;
+    }
 
 
 /*************** With grid Support ***************/
 
-
-
-
-
+}
 
 /*************** Media Query Medium Screen ***************/
+@media screen and (min-width: 1201px) {
 
-
-/******* Text Styles *******/
-
-
-
-/******* Image Styles *******/
-
-
-
-/******* Layout Styles *******/
-
-
-
-/******* Nav Styles *******/
-/*
-#pageNav nav li {
-    justify-content: space-around;
-    items-align: center;
-    list-style: none;
-    margin: 3vw;
-    width: 80vw;
-    height: 80vw;
-    overflow: hidden;
-}
-
-.projectPlaceholder {
-    height: 100%;
-    items-align: center;
-}
-*/
+    /******* Text Styles *******/
+    h1 {
+        font-size: 5em;
+    }
+    
+    p {
+        font-size: 3em;
+    }
+    
+    button {
+        font-size: 1.5em;
+    }
+    
+    
+    /******* Image Styles *******/
+    avatar {
+        height: 5vh;
+        width: auto;
+        /*clip-path: circle(17vw at 20vw 13vh);*/
+    }
+    
+        
+}    
+    
+    /******* Layout Styles *******/
+    
+    
+    
+    /******* Nav Styles *******/
+    /*
+    #pageNav nav li {
+        justify-content: space-around;
+        items-align: center;
+        list-style: none;
+        margin: 3vw;
+        width: 80vw;
+        height: 80vw;
+        overflow: hidden;
+    }
+    
+    .projectPlaceholder {
+        height: 100%;
+        items-align: center;
+    }
+    */
 
 
 /*************** With grid Support ***************/
