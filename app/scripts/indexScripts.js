@@ -1,6 +1,6 @@
 /*************** Global Variables ***************/
 const p = document.getElementById('projects');
-const home = document.querySelector('#returnHome');
+const home = document.querySelector('.returnHome');
 const pageOne = document.querySelector('#pageOne');
 const container = document.querySelector('.container');
 

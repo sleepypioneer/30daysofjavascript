@@ -78,7 +78,7 @@ ul {
     padding: 0;
 }
 
-#returnHome {
+.returnHome {
     visibility: hidden;
     position: absolute;
     top: 10vh;
@@ -86,11 +86,11 @@ ul {
     color: white;
 }
 
-#returnHome i {
+.returnHome i {
     font-size: 2em;
 }
 
-#returnHome i:hover{
+.returnHome i:hover{
     opacity: 0.8;
     font-size: 2em;
 }
@@ -196,7 +196,7 @@ ul {
     
     
     /******* Nav Styles *******/
-    #returnHome i {
+    .returnHome i {
         font-size: 4em;
     }
 
@@ -210,11 +210,11 @@ ul {
 
     /******* Text Styles *******/
     h1 {
-        font-size: 5em;
+      padding: 0 6em;
     }
     
     p {
-        font-size: 3em;
+      padding: 0 8em;
     }
     
     button {
@@ -223,20 +223,31 @@ ul {
     
     
     /******* Image Styles *******/
-    avatar {
-        height: 5vh;
+    .avatar {
+        height: 25vh;
         width: auto;
         /*clip-path: circle(17vw at 20vw 13vh);*/
     }
     
         
-}    
+   
     
     /******* Layout Styles *******/
     
     
     
     /******* Nav Styles *******/
+   .socialNav {
+      display: inline-block;
+   }
+   
+   .logo {
+      width: 3vw;
+      padding: 2px;
+      margin: auto;
+   }
+} 
+    
     /*
     #pageNav nav li {
         justify-content: space-around;

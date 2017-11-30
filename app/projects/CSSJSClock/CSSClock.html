@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>JS + CSS Clock</title>
+  <!-- Add icon library -->
+`	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
     html {
       background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
@@ -53,11 +56,32 @@
       transform: rotate(90deg);
       /*transition: all 0.5s ease; */
     }
+    
+    .returnHome {
+      height: 1.5em;
+      width: 1.5em;
+      top: 5%;
+      left: 5%;
+      position: fixed;
+      font-size: 4em;
+      color: white;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+    }
 
+    .returnHome a {
+      text-decoration: none;
+      color: inherit;
+    }
   </style>
 </head>
 <body>
-
+    <div class="returnHome">
+      <a href="../../index.html" > <i class="fa fa-home" aria-hidden="true"></i>	</a>
+    </div>
 
     <div class="clock">
       <div class="clock-face">
@@ -72,16 +96,16 @@
     const minuteHand = document.querySelector('.min-hand');
     const hourHand = document.querySelector('.hour-hand');
     
-  function setDate() {
-    const now = new Date();
-    const seconds = now.getSeconds();
-    const minutes = now.getMinutes();
-    const hours = now.getHours();
-     
-    const secondsDegrees = ((seconds / 60) * 360) + 90; // to turn the seconds into a degree (60s = 360) +90 is to offset default position at 90deg
-    if(secondsDegrees === 360){
-      secondHand.style.removeProperty("transition");
-    } else {
+    function setDate() {
+      const now = new Date();
+      const seconds = now.getSeconds();
+      const minutes = now.getMinutes();
+      const hours = now.getHours();
+       
+      const secondsDegrees = ((seconds / 60) * 360) + 90; // to turn the seconds into a degree (60s = 360) +90 is to offset default position at 90deg
+      if(secondsDegrees === 360){
+        secondHand.style.removeProperty("transition");
+      } else {
       
     }
     
