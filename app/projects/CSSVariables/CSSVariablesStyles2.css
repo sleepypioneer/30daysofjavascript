@@ -7,10 +7,13 @@
     --brightness: 100%;
     --contrast: 100%;
     --grayscale: 0%;
+    
     --opacity: 100%;
     --saturate: 100%;
     --sepia: 0%;
     --hue-rotate: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 /******* Text Styles *******/
@@ -21,8 +24,9 @@
 /******* Image Styles *******/
 
 img {
+  margin-bottom: 0;
+  margin-top: 2vh;
   width: 70vw;
-  height: auto;
   border-radius: 0.5em;
   padding: 2vw;
   background: var(--base);
@@ -32,51 +36,41 @@ img {
 
 /******* Layout Styles *******/
 body {
-    text-align: center;
-    background: #3B3355;
-    color: #FEFCFD;
-    font-family: 'Lobster', cursive;
-    font-weight: 100;
-    font-size: 1em;
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-}
-
-.wrapper {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+  text-align: center;
+  background: #3B3355;
+  color: #FEFCFD;
+  font-family: 'Lobster', cursive;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  height: 100%;
 }
 
 h2 {
-  font-size: 2em;
-  margin: 0.5em;
+  font-size: 3em;
+  margin-bottom: 0;
+  margin-top: 4vh;
 }
 
-.controls {
-    justify-content: center;
-}
 
 /******* Nav Styles *******/
 .returnHome {
     height: 1.5em;
     width: 1.5em;
+    top: 4vh;
+    left: 4vw;
+    position: fixed;
     font-size: 1.5em;
     color: #5D5D81;
     background-color: #BFCDE0;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.2em;
+    border-radius: 1vw;
     z-index: 1;
-    margin: 0.5em;
 }
   
 .returnHome a {
@@ -84,21 +78,17 @@ h2 {
     color: inherit;
 }
 
-.container {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-}
-
 .controls {
-    flex-direction: column;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: wrap;
 }
 
 input {
-
+  width:100px;
+  margin: 1.5vh 5vw;
 }
 
 /*************** Mobile First - no grid Support - Landscape ***************/
@@ -119,55 +109,63 @@ input {
 
 
 /*************** Media Query Small Screen ***************/
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 651px) {
 
     /******* Text Styles *******/
     h2 {
+      margin-bottom: 2vh;
+      margin-top: 4vh;
+      font-size: 5em;
+    }
+    
+    
+    /******* Image Styles *******/
+    img {
+        height: auto;
+        width: 80vw;
+    }
+    
+    /******* Layout Styles *******/
+    .controls {
+      padding: 0vw 6vw;
+      width: unset;
+      flex-direction: unset;
+      padding-bottom: 4vh;
       font-size: 2em;
     }
     
-    /******* Image Styles *******/
-
-    /******* Layout Styles *******/
-    .wrapper {
-        justify-content: space-evenly;
-    }
-    
-    .container {
-        flex-direction: row;
-        justify-content: center;
-    }
-    
-    .controls {
-        width: 70%;
-        margin-top: 1em;
-    }
     
     /******* Nav Styles *******/
 
-
+    .returnHome {
+      height: 6vw;
+      width: 6vw;
+      top: 6vh;
+      left: 6vw;
+      font-size: 6vw;
+    }
 /*************** With grid Support ***************/
 
 }
 /*************** Media Query Medium Screen ***************/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 851px) {
 
     /******* Text Styles *******/
-    h2 {
-       font-size: 2em;
-    }
 
+    h2 {
+     font-size: 4em;
+      margin-top: 2vh;
+    }
     
     /******* Image Styles *******/
-    img {
-        width: 50vw;
-        height: auto;
-    }
 
+    img {
+      margin-top: 0;
+    }
     /******* Layout Styles *******/
-    
-    .controls {
-        justify-content: space-between;
+    .returnHome {
+      top: 4vh;
+      left: 4vw;
     }
 
     /******* Nav Styles *******/
@@ -181,56 +179,31 @@ input {
 
 }
 /*************** Media Query Large Screen ***************/
-@media screen and (min-width: 1001px) {
-
-    /******* Text Styles *******/
-    
-    body {
-        font-size: 1.5em;
-    }
-    
-    /******* Image Styles *******/
-
-    
-    /******* Layout Styles *******/
-
-    
-
-    /******* Nav Styles *******/
-    
-    
-    /*************** With grid Support ***************/
-
-
-
-}
-
-/*************** Media Query Large Screen ***************/
-@media screen and (min-width: 1301px) {
+@media screen and (min-width: 1201px) {
 
     /******* Text Styles *******/
     h2 {
-        margin: 0px;
+      margin-top: 1em;
     }
+    
     /******* Image Styles *******/
     img {
-
+      width: 60vw;
+      height: auto;
     }
     
     /******* Layout Styles *******/
-    .wrapper {
-        flex-direction: row; 
-    }
-    .container {
-        
+    .returnHome {
+        top: 4vh;
+        left: 4vw;
+        font-size: 3em;
+        height: 1.5em;
+        width: 1.5em;
     }
     
     .controls {
-        flex-direction: column; 
-        width: 30vw;
+      margin-top: 0;
     }
-    
-
     /******* Nav Styles *******/
     
     
