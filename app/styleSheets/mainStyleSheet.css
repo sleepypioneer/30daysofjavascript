@@ -1,5 +1,8 @@
 /*************** Mobile First - no grid Support - Landscape ***************/
 
+* {
+   box-sizing: border-box;
+}
 /******* Text Styles *******/
 h1,h5{
     font-family: 'Abril Fatface', cursive;
@@ -64,7 +67,18 @@ body {
     text-align: center;
 }
 
-
+.video-list__number {
+    background: rgba(0,0,0,1);
+    color: #fff;
+    top: 0;
+    left: 0;
+    line-height: 2rem;
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    text-align: center;
+    font-size: 1rem;
+    float: left;
+}
 
 
 /******* Nav Styles *******/
@@ -87,11 +101,6 @@ ul {
 }
 
 .returnHome i {
-    font-size: 2em;
-}
-
-.returnHome i:hover{
-    opacity: 0.8;
     font-size: 2em;
 }
 
@@ -192,7 +201,20 @@ ul {
     
     
     /******* Layout Styles *******/
+    #pageNav nav ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
     
+    #pageNav nav li {
+      min-width: 20vw;
+      min-height: 20vw;
+      flex: 1;
+      margin: 2vw;
+      background-size: cover;
+    }
     
     
     /******* Nav Styles *******/

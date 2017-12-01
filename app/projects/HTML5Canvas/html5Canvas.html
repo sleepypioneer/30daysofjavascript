@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale =1.0">
+  <title> HTML5 Canvas Draw Pad </title>
+  
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Add Google Font library -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Diplomata+SC|Lobster|Palanquin+Dark|Shrikhand" rel="stylesheet">
+    
+    <!-- Add Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="../CSSVariables/CSSVariablesStyles.css">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="returnHome">
+                <a href="../../index.html" > <i class="fa fa-home" aria-hidden="false"></i>	</a>
+            </div>
+            <h2>HTML5 Canvas Draw Pad </h2>
+            
+        </div>
+        <canvas id="draw" width="800vh" height="400vw"></canvas>
+    </div>
+<script>
+  const canvas = document.querySelector('#draw');
+  const ctx = canvas.getContext('2d');
+  ctx.strokeStyle = '#BADA55';
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  
+  
+  let isDrawing = false; //when we click down this will go to true so we can draw on canvas
+  let lastX = 0;
+  let lastY = 0;
+  
+  function draw(e) {
+    console.log('hi');
+    //if(!isDrawing) return; // stop the fn from running when they are not moused down.
+  }
+  
+  canvas.addEventListener('mousemove', draw);
+  //canvas.addEventListener('mousedown', () => isDrawing = true);
+  //canvas.addEventListener('mouseup', () => isDrawing = false);
+  //canvas.addEventListener('mouseout', () => isDrawing = false);
+  
+</script>
+
+<style>
+  canvas {
+    background: #BFCDE0;
+  }
+</style>
+
+</body>
+</html>
