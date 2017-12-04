@@ -58,6 +58,11 @@ body {
     top: 0;
 }
 
+iframe {
+   width: 100vw;
+   height: 100vh;
+}
+
 
 .container {
     position:absolute;
@@ -84,24 +89,28 @@ body {
 /******* Nav Styles *******/
 
 nav {
-    display: flex;
+   display: flex;
 }
 
 ul {
-    margin: auto;
-    padding: 0;
+   margin: auto;
+   padding: 0;
 }
 
-.returnHome {
-    visibility: hidden;
-    position: absolute;
-    top: 10vh;
-    left: 5vw;
-    color: white;
+#returnHome {
+   visibility: hidden;
+   position: fixed;
+   top: 2vh;
+   left: 2vw;
+   color: white;
+   width: 10vw;
+   height: 10vw;
+   background-color: black;
+   display: block;
 }
 
-.returnHome i {
-    font-size: 2em;
+#returnHome i {
+   font-size: 2em;
 }
 
 
@@ -158,6 +167,13 @@ ul {
 .projectPlaceholder {
    display: none;
 }
+
+   .projectButton:hover {
+      border: solid #282828 0.5em;
+   }
+
+
+
 /*************** Mobile First - no grid Support - Landscape ***************/
 
 
@@ -221,7 +237,10 @@ ul {
     .returnHome i {
         font-size: 4em;
     }
-
+    
+   .projectButton:hover {
+      border: solid darkgrey 1em;
+   }
 
 /*************** With grid Support ***************/
 
