@@ -5,6 +5,6 @@ var rootPath = path.normalize(__dirname + '/../'); //create root path dirname po
 
 app.use(express.static(rootPath + '/app')); // serve up pages using app.use, static function serves page i a given directory without processing them
 
-app.listen(8000);
+app.listen(9000);
 
-console.log('Listening on port 8000...');
+console.log('Listening on port 9000...');

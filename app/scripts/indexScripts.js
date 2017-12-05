@@ -70,7 +70,7 @@ function addContent(a) {
     src = "projects/referenceVsCopying/referenceVsCopying.html";
   }
    if (a ===14) {
-    src = "projects/slideInOnControl/slideInOnScroll.html";
+    src = "projects/slideInOnScroll/slideInOnScroll.html";
   }
    if (a ===15) {
     src = "projects/LocalStorage/localStorage.html";
