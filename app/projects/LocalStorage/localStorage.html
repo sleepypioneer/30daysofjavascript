@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale =1.0">
   <title>LocalStorage</title>
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="scripts/toppings.json"></script>
 </head>
 <body>
   <!--
@@ -12,7 +14,7 @@
       https://www.freepik.com/free-photos-vectors/logo
    -->
 
-  <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="295.798px" height="305.074px" viewBox="0 0 195.798 205.074" enable-background="new 0 0 195.798 205.074" xml:space="preserve">
+  <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 195.798 205.074" enable-background="new 0 0 195.798 205.074" xml:space="preserve">
     <g>
 	<path fill="#FFFFFF" d="M194.668,68.572C180.273,27.558,141.384,0,97.898,0C54.413,0,15.524,27.558,1.129,68.572l-0.966,2.752
 		h11.342h172.787h11.342L194.668,68.572z M182.611,67.19c-4.358-10.441-10.555-19.898-18.291-27.997
@@ -78,21 +80,48 @@
 
 
  
+  
   <div class="wrapper">
+    <h2>Base</h2>
+    <p style="font-style: italic; font-size: 0.75em;">All Pizzas are 32cm</p>
+    <ul class="bases">
+      <li>
+        <input type="radio" data-index="" id="" value="Thin Crust" name="crust" checked ="true"/> 
+        <label >Thin Crust - Neapolitan Style</label>
+      </li>
+      <li>
+        <input type="radio" data-index="" id="" name="crust" value="Thick Crust">
+        <label>Thick Crust - Sicilian Style</label>
+      </li>
+      <li>
+        <input type="radio" data-index="" id=""  name="crust" value="Stuffed Crust">
+        <label>Stuffed Crust (Cheese)</label>
+      </li>
+    </ul>
     <h2>Toppings</h2>
+    <p style="font-style: italic; font-size: 0.75em;">All Pizzas come with a Tomatoe pesto Base & Chedder Cheese</p>
     <p></p>
-    <ul class="plates">
-      <li>Loading Toppings...</li>
+    <ul class="toppings">
+      <li>Start adding Toppings below...</li>
     </ul>
     <form class="add-items">
-      <input type="text" name="item" placeholder="Topping Name" required>
-      <input type="submit" value="+ Add Item">
+      <input type="text" id="toppingInputField" name="item" placeholder="Topping Name" autocomplete="off" required>
+      <input type="submit" value="+ Add Topping">
     </form>
+    <div id="suggestions"></div>
+    <div class="buttons">
+      <input type="button" value="Clear Order" id="clearOrder" class="button">
+      <input type="button" value="Save as standard" id="saveFavourite" class="button">
+      <input type="button" value="Order" id="order" class="button">
+    </div>
+    <div id="info"></div>
+
   </div>
   
-  
+<script src="scripts/mainScript.js"></script>  
 
-<script src="scripts/mainScript.js"></script>
+<script src="scripts/order.js"></script>
+
 
 
 </body>

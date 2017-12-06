@@ -1,77 +1,259 @@
+/*************** Mobile First - no grid Support - Landscape ***************/
+   
+/******* Text Styles *******/
+@font-face {
+    font-family: "Ionicons";
+    src:    url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1");
+    src:    url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"),
+            url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.ttf?v=2.0.1") format("truetype"),
+            url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.woff?v=2.0.1") format("woff"),
+            url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 
-    html {
-      box-sizing: border-box;
-      background:url('imgs/pizza.jpg') center no-repeat;
-      background-size:cover;
-      min-height:100vh;
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: Futura,"Trebuchet MS",Arial,sans-serif
-    }
-    *, *:before, *:after {box-sizing: inherit; }
-
-    svg {
-      fill:white;
-      background: rgba(0,0,0,0.1);
-      padding: 20px;
-      border-radius: 50%;
-      margin-bottom: 50px;
+h2 {
+    text-align: center;
+    margin: 0;
+    font-weight: 200;
     }
 
-    .wrapper {
-      padding: 20px;
-      max-width: 350px;
-      background: rgba(255,255,255,0.95);
-      box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
-    }
+.button {
+    font-size: 0.7em;
+    display: inline-block;
+}
 
-    h2 {
-      text-align: center;
-      margin: 0;
-      font-weight: 200;
-    }
+#suggestions {
+    list-style: none;
+    padding-bottom: 0.75em;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex: 1;
+    flex-wrap: wrap;
+}
 
-    .plates {
-      margin: 0;
-      padding: 0;
-      text-align: left;
-      list-style: none;
-    }
+/******* Image Styles *******/
+svg {
+    fill:white;
+    background: rgba(0,0,0,0.1);
+    padding: 0.5em;
+    border-radius: 50%;
+    margin-bottom: 4vh;
+    width: 40vw;
+    height: 40vw;
+ }
 
-    .plates li {
-      border-bottom: 1px solid rgba(0,0,0,0.2);
-      padding: 10px 0;
-      font-weight: 100;
-      display: flex;
-    }
+/******* Layout Styles *******/
+html {
+    box-sizing: border-box;
+    background:url('imgs/pizza.jpg') center no-repeat;
+    background-size:cover;
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Futura,"Trebuchet MS",Arial,sans-serif
+}
 
-    .plates label {
-      flex:1;
-      cursor: pointer;
+body{
+    width: 80vw;
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    justify-content: stretch;
+    align-items: center;
+    font-size: 0.75em;
+}
+   
+*, *:before, *:after {box-sizing: inherit; }
 
-    }
+.wrapper {
+    padding: 20px;
+    max-width: 75vw; 
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+}
 
-    .plates input {
-      display: none;
-    }
+/******* Nav Styles *******/
 
-    .plates input + label:before {
-      content: '⬜️';
-      margin-right: 10px;
-    }
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+}
 
-    .plates input:checked + label:before {
-      content: '🌮';
-    }
+.info {
+    display: none;
+}
 
-    .add-items {
-      margin-top: 20px;
-    }
+.bases {
+    margin: 0;
+    margin-bottom: 2vh;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
 
-    .add-items input {
-      padding:10px;
-      outline:0;
-      border:1px solid rgba(0,0,0,0.1);
-    }
+.bases li {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 10px 0;
+    font-weight: 100;
+    display: flex;
+}
+
+.bases label {
+    flex:1;
+    cursor: pointer;
+
+}
+
+.bases input + label:before {
+    content: '⬜️';
+    margin-right: 10px;
+}
+
+.bases input:checked + label:before {
+    font-family: "Ionicons"; 
+    content: '\f2a8';
+}
+
+.bases input {
+   display: none;
+}
+
+
+.toppings {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
+
+.toppings li {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 10px 0;
+    font-weight: 100;
+    display: flex;
+}
+
+.toppings label {
+    flex:1;
+    cursor: pointer;
+
+}
+
+.toppings input {
+    display: none;
+}
+
+.toppings input + label:before {
+    content: '⬜️';
+    margin-right: 10px;
+}
+
+.toppings input:checked + label:before {
+    font-family: "Ionicons"; 
+    content: '\f2a8';
+}
+
+.add-items {
+    margin-top: 1em;
+}
+
+.add-items input {
+    padding:1em;
+    margin-bottom: 1em;
+    outline:0;
+    font-size: 0.7em;
+    border:1px solid rgba(0,0,0,0.1);
+}
+
+/*************** Mobile First - no grid Support - Landscape ***************/
+
+
+
+
+/*************** With grid Support ***************/
+
+@supports (display: grid) {
+    
+
+
+
+}
+
+
+
+
+/*************** Media Query Small Screen ***************/
+@media screen and (min-width: 651px) {
+
+    /******* Text Styles *******/
+
+    
+    
+    /******* Image Styles *******/
+
+    
+    /******* Layout Styles *******/
+    
+    
+    
+    /******* Nav Styles *******/
+
+
+/*************** With grid Support ***************/
+
+}
+/*************** Media Query Medium Screen ***************/
+@media screen and (min-width: 1201px) {
+
+    /******* Text Styles *******/
+
+        
+    
+    /******* Layout Styles *******/
+    
+    
+    
+    /******* Nav Styles *******/
+
+
+
+/*************** With grid Support ***************/
+
+
+
+
+}
+/*************** Media Query Large Screen ***************/
+@media screen and (min-width: 1501px) {
+
+/******* Text Styles *******/
+
+
+
+/******* Image Styles *******/
+
+
+
+/******* Layout Styles *******/
+
+
+
+/******* Nav Styles *******/
+
+
+/*************** With grid Support ***************/
+
+}
+
+    
+
+    
+    
