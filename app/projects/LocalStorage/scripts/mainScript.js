@@ -1,3 +1,15 @@
+/*************** thingd to do ***************/
+/*
+***only be able to add toppings once (or tweice) (should then be removed from the options)
+***as soon as the suggestion is clicked it should be added
+***hover over for more info
+***order function
+        -check that the order is complete
+        -comile order into string
+        -make string alert in box over screen and prompt confirmation
+***save to local storage function
+
+*/
 /*************** Protoype Functions ***************/
 String.prototype.cap = function () {
         return this.charAt(0).toUpperCase() + this.slice(1);
