@@ -9,6 +9,10 @@
         -make string alert in box over screen and prompt confirmation
 ***save to local storage function
 
+***advancements
+        -give estimated delivery
+        -take location of order
+        -be able to suggest new toppings
 */
 /*************** Protoype Functions ***************/
 String.prototype.cap = function () {
