@@ -2,7 +2,7 @@
 const p = document.getElementById('projects');
 const pageOne = document.querySelector('#pageOne');
 const container = document.querySelector('.container');
-
+const iframe = document.querySelector("iframe");
 
 
 /*************** Event Listeners ***************/
@@ -14,16 +14,44 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
+
+/*************** Utility Functions ***************/
+function debounce(func, wait = 20, immediate = true) { //used so that the scroll function below is not called so frequent and causes performance issues.
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+    
+function findElementPosition(element) {
+  let domRect = element.getBoundingClientRect();
+  return domRect.y;
+}
+
 /*************** Functions ***************/
 
 function scrollToProjects() {
     pageOne.style.display = 'none';
     container.style.top = "0";
-
+    window.addEventListener('scroll', debounce(changeNavButtonOnScroll));
 }
 
-const iframe = document.querySelector("iframe");
 
+/*+++++to add ++++++
+ function takePageOneOfScreenOnScrollDown(){
+  
+}*/
+
+
+/*++++to do - change this function so it is not inline on html */
 function addContent(a) {
 
   let src;
@@ -31,114 +59,121 @@ function addContent(a) {
     src = "https://sleepypioneer.wordpress.com/";
   }
   if (a === 1) {
-    src = "projects/drumKit/drumKit.html";
+    src = "projects/01JavaScriptDrumKit/drumKit.html";
   }       
   if (a === 2) {
-    src = "projects/CSSJSClock/CSSClock.html";
+    src = "projects/02JSandCSSClock/CSSClock.html";
   }
   if (a === 3) {
-    src = "projects/CSSVariables/CSSVariables.html";
+    src = "projects/03CSSVariables/CSSVariables.html";
   }
   if (a === 4) {
-    src = "projects/ArrayCardio1/arrayCardio1.html";
+    src = "projects/04ArrayCardioDay%201/arrayCardio1.html";
   }
   if (a === 5) {
-    src = "projects/FlexGallery/flexGallery.html";
+    src = "projects/05FlexPanelGallery/flexGallery.html";
   }
   if (a === 6) {
-    src = "projects/AjaxTypeAhead/AjaxTypeAhead.html";
+    src = "projects/06TypeAhead/AjaxTypeAhead.html";
   }
   if (a === 7) {
-    src = "projects/ArrayCardio2/arrayCardio2.html";
+    src = "projects/07ArrayCardioDay%202/arrayCardio2.html";
   }
   if (a === 8) {
-    src = "projects/HTML5Canvas/html5Canvas.html";
+    src = "projects/08FunwithHTML5Canvas/html5Canvas.html";
   }
   if (a === 9) {
-    src = "projects/DevTools/devTools.html";
+    src = "projects/09DevToolsDomination/devTools.html";
   }
   if (a ===10) {
-    src = "projects/HoldShiftCheckboxes/checkBoxesWhenHoldingShift.html";
+    src = "projects/10HoldShiftandCheckCheckboxes/checkBoxesWhenHoldingShift.html";
   }
   if (a === 11) {
-    src = "projects/customVideoControls/customVideo.html";
+    src = "projects/11CustomVideoPlayer/customVideo.html";
   }
   if (a ===12) {
-    src = "projects/keySequenceDetection/keySequence.html";
+    src = "projects/12KeySequenceDetection/keySequence.html";
   }
    if (a ===13) {
-    src = "projects/referenceVsCopying/referenceVsCopying.html";
+    src = "projects/13SlideinonScroll/slideInOnScroll.html";
   }
    if (a ===14) {
-    src = "projects/slideInOnScroll/slideInOnScroll.html";
+    src = "projects/14JavaScriptReferencesVSCopying/referenceVsCopying.html";
   }
    if (a ===15) {
-    src = "projects/LocalStorage/localStorage.html";
+    src = "projects/15LocalStorage/localStorage.html";
   }
+  if (a ===16) {
+    src = "";
+  }
+  if (a ===17) {
+    src = "";
+  }
+  if (a ===18) {
+    src = "";
+  }
+  if (a ===19) {
+    src = "";
+  }
+  if (a ===20) {
+    src = "";
+  }
+  if (a ===21) {
+    src = "";
+  }
+  if (a ===22) {
+    src = "";
+  }
+  if (a ===23) {
+    src = "";
+  }
+  if (a ===24) {
+    src = "";
+  }
+  if (a ===25) {
+    src = "";
+  }
+  if (a ===26) {
+    src = "";
+  }
+  if (a ===27) {
+    src = "";
+  }
+  if (a ===28) {
+    src = "";
+  }
+  if (a ===29) {
+    src = "";
+  }
+  if (a ===30) {
+    src = "";
+  }
+
   iframe.src = src;    
   iframe.contentWindow.focus();
   const returnHome = document.getElementById('returnHome');
   returnHome.style.visibility = "visible";
 }
 
-/*function addContent(a) {
-				var xhr = new XMLHttpRequest();
-				xhr.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-            console.log(this)
-						//document.getElementById("content").innerHTML = this.responseText;
-					}
-				};
- 				if (a === 1) {
-					xhr.open('POST', 'ex.txt', true);
-				}       
-				if (a === 2) {
-					xhr.open('GET', '../projects/CSSJSClock/CSSClock.html', true);
-				}
-				if (a === 3) {
-					console.log(a);
-					xhr.open('GET', '../projects/CSSVariables/CSSVariables.html', true);
-				}
-				if (a === 4) {
-					xhr.open('GET', '../projects/ArrayCardio1/arrayCardio1.html', true);
-				}
-				if (a === 5) {
-					xhr.open('GET', 'projects/FlexGallery/flexGallery.html', true);
-				}
-				if (a === 6) {
-					xhr.open('GET', 'projects/AjaxTypeAhead/AjaxTypeAhead.html', true);
-				}
-				if (a === 7) {
-					xhr.open('GET', 'projects/ArrayCardio2/arrayCardio2.html', true);
-				}
-        if (a === 8) {
-					xhr.open('GET', 'projects/HTML5Canvas/html5Canvas.html', true);
-				}
-        if (a === 9) {
-					xhr.open('GET', 'projects/DevTools/devTools.html', true);
-				}
-        if (a ===10) {
-					xhr.open('GET', 'projects/HoldShiftCheckboxes/checkBoxesWhenHoldingShift.html', true);
-				}
-        if (a === 11) {
-					xhr.open('GET', 'projects/customVideoControls/customVideo.html', true);
-				}
-        if (a ===12) {
-					xhr.open('GET', 'projects/keySequenceDetection/keySequence.html', true);
-				}
-         if (a ===13) {
-					xhr.open('GET', 'projects/referenceVsCopying/referenceVsCopying.html', true);
-				}
-         if (a ===14) {
-					xhr.open('GET', 'projects/slideInOnControl/slideInOnScroll.html', true);
-				}
-         if (a ===15) {
-					xhr.open('GET', 'projects/LocalStorage/localStorage.html', true);
-				}     
-				xhr.send(null);
-					
-			}*/
+
+
+function changeNavButtonOnScroll() {
+  let pageNavPosition = findElementPosition(document.querySelector('#pageOne'));
+  let returnHomePosition = findElementPosition(document.querySelector('#returnHome'));
+  
+  //console.log(pageNavPosition);
+  //console.log(returnHomePosition);
+  
+  // need to think here!
+
+}
+
+    
+
+
+
 
 function init() {
 
 }
+

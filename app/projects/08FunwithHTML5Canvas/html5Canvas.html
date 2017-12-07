@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale =1.0">
+  <title> HTML5 Canvas Draw Pad </title>
+  
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Add Google Font library -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Diplomata+SC|Lobster|Palanquin+Dark|Shrikhand" rel="stylesheet">
+    
+    <!-- Add Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="../../styleSheets/projectsStyleSheet.css">
+    
+    <style>
+      button {
+        border-radius: 1em;
+        box-shadow: 5px 5px 2px #5D5D81;
+        background-color: #BFCDE0;
+      }
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            
+            <h2>HTML5 Canvas Draw Pad </h2>
+            
+        </div>
+        <canvas id="draw" width="800vh" height="400vw"></canvas>
+        
+        <button onclick="clearCanvas();"> <h2>Clear</h2>  </button>
+    </div>
+<script>
+  CanvasRenderingContext2D.prototype.clear = 
+  CanvasRenderingContext2D.prototype.clear || function (preserveTransform) {
+    if (preserveTransform) {
+      this.save();
+      this.setTransform(1, 0, 0, 1, 0, 0);
+    }
+
+    this.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+    if (preserveTransform) {
+      this.restore();
+    }           
+  };
+  
+  const canvas = document.querySelector('#draw');
+  const ctx = canvas.getContext('2d');
+  ctx.strokeStyle = '#5D5D81';
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  
+  
+  let isDrawing = false, //when we click down this will go to true so we can draw on canvas
+  lastX = 0,
+  lastY = 0,
+  hue = 0,
+  direction = true;
+  
+  function draw(e) {
+    if(!isDrawing) return; // stop the fn from running when they are not moused down.
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+    
+    hue++;
+    if(hue >= 360) {
+      hue = 0;
+    }
+    if(ctx.lineWidth >= 50 || ctx.lineWidth <= 1){
+      direction = !direction;
+    }
+    if(direction) {
+      ctx.lineWidth++;
+    } else {
+      ctx.lineWidth--;
+    }
+    
+  }
+  
+  function clearCanvas() {
+    ctx.clear();
+  }
+  
+  canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    ctx.lineWidth = 1;
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+  });
+  
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mouseup', () => isDrawing = false);
+  canvas.addEventListener('mouseout', () => isDrawing = false);
+  
+</script>
+
+<style>
+  canvas {
+    background: #BFCDE0;
+  }
+</style>
+
+</body>
+</html>

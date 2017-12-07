@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale =1.0">
+  <title> Array Cadio Day 1 </title>
+  
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Add Google Font library -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Diplomata+SC|Lobster|Palanquin+Dark|Shrikhand" rel="stylesheet">
+    
+    <!-- Add Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="../../styleSheets/projectsStyleSheet.css">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            
+            <h2>Guess the secret Pass Phrase</h2>
+            <h5 id="hint">Hint!</h5>
+        </div>
+        <p id="gotIt"></p>
+    </div>
+
+<script>
+  const pressed = [];
+  const secretCode = 'jessica';
+  let gotIt = document.getElementById('gotIt');
+  window.addEventListener('keyup',(e) => {
+    pressed.push((e.key).toLowerCase());
+    console.log(pressed);
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    if(pressed.join('').includes(secretCode)) {
+      console.log("ding ding!");
+    }
+    console.log(pressed);
+    gotIt.innerHTML = "Well done you got the secret pass phrase!";
+  });
+  
+  let hint = document.getElementById('hint');
+  hint.addEventListener('mouseover', () => {
+    hint.innerHTML = "It's my Name!";
+  });
+    hint.addEventListener('mouseout', () => {
+    hint.innerHTML = "Hint!";
+  });
+</script>
+</body>
+</html>
