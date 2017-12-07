@@ -247,7 +247,7 @@ ul {
     }
     
    .projectButton:hover {
-      border: solid darkgrey 1em;
+      border: solid solid #282828 1em;
    }
 
 /*************** With grid Support ***************/

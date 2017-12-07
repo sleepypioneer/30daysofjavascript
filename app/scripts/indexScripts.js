@@ -104,49 +104,49 @@ function addContent(a) {
     src = "projects/15LocalStorage/localStorage.html";
   }
   if (a ===16) {
-    src = "";
+    src = "projects/16MouseMoveShadow/index-start.html";
   }
   if (a ===17) {
-    src = "";
+    src = "projects/17SortWithoutArticles/index-START.html";
   }
   if (a ===18) {
-    src = "";
+    src = "projects/18AddingUpTimeswithReduce/index-START.html";
   }
   if (a ===19) {
-    src = "";
+    src = "projects/19WebcamFun/index.html";
   }
   if (a ===20) {
-    src = "";
+    src = "projects/20SpeechDetection/index-START.html";
   }
   if (a ===21) {
-    src = "";
+    src = "projects/21Geolocation/index-START.html";
   }
   if (a ===22) {
-    src = "";
+    src = "projects/22FollowAlongLinkHighlighter/index-START.html";
   }
   if (a ===23) {
-    src = "";
+    src = "projects/23SpeechSynthesis/index-START.html";
   }
   if (a ===24) {
-    src = "";
+    src = "projects/24StickyNav/index-START.html";
   }
   if (a ===25) {
-    src = "";
+    src = "projects/25EventCapturePropagationBubblingandOnce/index-START.html";
   }
   if (a ===26) {
-    src = "";
+    src = "projects/26StripeFollowAlongNav/index-START.html";
   }
   if (a ===27) {
-    src = "";
+    src = "projects/27ClickandDrag/index-START.html";
   }
   if (a ===28) {
-    src = "";
+    src = "projects/28VideoSpeedController/index-START.html";
   }
   if (a ===29) {
-    src = "";
+    src = "projects/29CountdownTimer/scripts-START.js";
   }
   if (a ===30) {
-    src = "";
+    src = "projects/30WhackAMole/index-START.html";
   }
 
   iframe.src = src;    
